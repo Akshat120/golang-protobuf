@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package software.proto.pkg;
+
+option go_package="my-protobuf/protogen/software";
+/*
+    Software Application
+*/
+message Application {
+    string version = 1;
+    string name = 2;
+    repeated string platforms = 3;
+}

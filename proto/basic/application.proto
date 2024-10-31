@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "proto/job/application.proto";
+import "proto/software/application.proto";
+
+option go_package="my-protobuf/protogen/basic";
+
+message JobApplication {
+    job.proto.pkg.Application application = 1;
+    uint32 job_id = 2 [json_name="job_id"];
+}
+
+message SoftwareApplication {
+    software.proto.pkg.Application application = 1;
+    uint32 software_id = 2 [json_name="software_id"];
+}
